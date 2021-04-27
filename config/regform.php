@@ -14,17 +14,17 @@ if(isset($_POST['submit_data'])){
   if (!empty($first_name && $last_name && $wallet_id)) {
     if(!preg_match('/^[a-z ]+$/i',$first_name)) {
         $_SESSION['error']= "<div style=color:red>Incorrect naming format</div>";
-        header("Location:sign_up.php");
+        header("Location:register");
         die();
     }
     if(!preg_match('/^[a-z ]+$/i',$last_name)) {
         $_SESSION['error']= "<div style=color:red>Incorrect naming format</div>";
-        header("Location:sign_up.php");
+        header("Location:register");
         die();
     } 
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         $_SESSION['error']= "<div style=color:red>Input a valid email address</div>";
-        header("Location:sign_up.php");
+        header("Location:register");
         die();
     }
     
@@ -34,7 +34,7 @@ if(isset($_POST['submit_data'])){
 
     if ($resultCheck > 0) {
         $_SESSION['error']= "<div style=color:red>email already exists</div>";
-        header("Location:sign_up.php");
+        header("Location:register");
         die();
     }
     $q = "SELECT * FROM user_tb WHERE username = '$username'";
@@ -43,13 +43,13 @@ if(isset($_POST['submit_data'])){
 
     if ($rC > 0) {
         $_SESSION['error']= "<div style=color:red>username already exists</div>";
-        header("Location:sign_up.php");
+        header("Location:register");
         die();
     }
 
     if ($password != $con_password) {
         $_SESSION['pass']= "<div style=color:red>Password confirmation does not match</div>";
-        header("Location:sign_up.php");
+        header("Location:register");
         die();
     }
 
@@ -102,7 +102,7 @@ if(isset($_POST['login_data'])){
    
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         $_SESSION['error']= "<div style=color:red>Input a valid email address</div>";
-        header("Location:sign_up.php");
+        header("Location:login");
         die();
     }
     
@@ -142,7 +142,7 @@ if(isset($_POST['reset'])){
 
   if($password1 != $password2){
     $_SESSION['error']= "<div style=color:red>Input is Empty</div>";
-    header("Location:rest.php");
+    header("Location:reset.php");
     die();
   }else{
     $hash = password_hash($password1, PASSWORD_DEFAULT);
