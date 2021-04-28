@@ -16,7 +16,7 @@ if(isset($_POST['update_course'])){
     }
 }
 
-if(isset($_POST['create_course'])){
+if(isset($_POST['create'])){
     $course_code = trim($con,$_POST['course_code']);
     $course_name = trim($con,$_POST['course_name']);
     $lecturer = trim($con,$_POST['lecturer']);
@@ -24,7 +24,7 @@ if(isset($_POST['create_course'])){
 
     $createCourse = mysqli_query($con,"INSERT INTO course_tb (id,user_id,course_code,course_name,lecturer) VALUES (NULL,'".$user_id."','".$course_code."','".$course_name."','".$lecturer."')");
     if($createCourse === true){
-        $_SESSION['success']= "<div style=color:green>Course has been updated</div>";
+        $_SESSION['success']= "<div style=color:green>Course has been created</div>";
     header("Location:dashboard");
     die();
     }

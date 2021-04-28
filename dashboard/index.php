@@ -9,6 +9,7 @@ if(!isset($_SESSION['unique_id'])){ header('location:login?error=Please login fi
 <title>Register</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 <?php if(isset($_SESSION['success'])){

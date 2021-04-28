@@ -11,6 +11,7 @@ $data = mysqli_fetch_assoc($course)
 <title>Register</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -20,11 +21,11 @@ $data = mysqli_fetch_assoc($course)
 }?>
 <form action="del.php" method="post">
 <label>Course No</label>
-<input type="text" name="course_code" value="<?php echo $data['course_code']?>"><br>
+<input class="form-control" type="text" name="course_code" value="<?php echo $data['course_code']?>"><br>
 <label>Course Name</label>
-<input type="text" name="course_name" value="<?php echo $data['course_name']?>"><br>
+<input class="form-control" type="text" name="course_name" value="<?php echo $data['course_name']?>"><br>
 <label>Lecturer</label>
-<input type="text" name="lecturer" value="<?php echo $data['lecturer']?>"><br>
+<input class="form-control" type="text" name="lecturer" value="<?php echo $data['lecturer']?>"><br>
 <input type="hidden" name="course_id" value="<?php echo $course_id?>"><br>
 <button type="submit" name="update_course">Update Course</button>
 </form>

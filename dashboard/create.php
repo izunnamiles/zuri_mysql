@@ -7,6 +7,7 @@ session_start();
 <title>Register</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -16,12 +17,12 @@ session_start();
 }?>
 <form action="del.php" method="post">
 <label>Course No</label>
-<input type="text" name="course_code"><br>
+<input class="form-control" type="text" name="course_code"><br>
 <label>Course Name</label>
-<input type="text" name="course_name"><br>
+<input class="form-control" type="text" name="course_name"><br>
 <label>Lecturer</label>
-<input type="text" name="lecturer"><br>
-<button type="submit" name="update_course">Update Course</button>
+<input class="form-control" type="text" name="lecturer"><br>
+<button type="submit" name="create">Update Course</button>
 </form>
 </body>
 </html>
