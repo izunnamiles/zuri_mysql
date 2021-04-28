@@ -11,7 +11,7 @@ session_start();
 
 </head>
 <body>
-<legend>
+<div class="container">
 <?php if(isset($_SESSION['error'])){
     echo $_SESSION['error'];
     unset($_SESSION['error']);
@@ -29,8 +29,8 @@ session_start();
 <input class="form-control" type="password" name="password"><br>
 <label>Confirm Password</label>
 <input class="form-control" type="password" name="con_password"><br>
-<button type="submit" name="submit_data">Register</button>
+<button type="submit" class="btn btn-primary "name="submit_data">Register</button>
 </form>
-</legend>
+</div>
 </body>
 </html>

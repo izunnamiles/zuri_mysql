@@ -22,7 +22,7 @@ session_start();
 <input class="form-control" type="text" name="course_name"><br>
 <label>Lecturer</label>
 <input class="form-control" type="text" name="lecturer"><br>
-<button type="submit" name="create">Update Course</button>
+<button  class="btn btn-primary" type="submit" name="create">Update Course</button>
 </form>
 </body>
 </html>

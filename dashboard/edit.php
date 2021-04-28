@@ -27,7 +27,7 @@ $data = mysqli_fetch_assoc($course)
 <label>Lecturer</label>
 <input class="form-control" type="text" name="lecturer" value="<?php echo $data['lecturer']?>"><br>
 <input type="hidden" name="course_id" value="<?php echo $course_id?>"><br>
-<button type="submit" name="update_course">Update Course</button>
+<button type="submit"class="btn btn-primary" name="update_course">Update Course</button>
 </form>
 </body>
 </html>
