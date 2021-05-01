@@ -17,6 +17,7 @@ if(!isset($_SESSION['unique_id'])){ header('location:login?error=Please login fi
     unset($_SESSION['success']);
 }?>
 <a href="create.php">Add New Course</a>
+<a href="logout.php">Log out</a>
 <table class="table">
         <thead>
             <tr>
